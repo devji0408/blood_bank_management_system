@@ -1,11 +1,14 @@
 <?php
-$host = 'dash.infinityfree.com'; // InfinityFree का DB host (phpMyAdmin में दिखता है)
-$user = 'mybloodbank';        // DB username
-$pass = 'GnDukQB1w0azvPf';     // DB password
-$db   = 'if0_39308890_blood_bank';  // DB name
+$host = 'localhost';      // XAMPP ke liye hamesha localhost
+$user = 'root';           // default username
+$pass = '';               // default password blank hota hai
+$db   = 'blood_bank';     // apna DB ka naam (jo tum phpMyAdmin me create/import karoge)
 
 $conn = new mysqli($host, $user, $pass, $db);
+
 if ($conn->connect_error) {
     die("Database Connection Failed: " . $conn->connect_error);
+} else {
+    // echo "Database Connected Successfully"; // test ke liye
 }
 ?>
